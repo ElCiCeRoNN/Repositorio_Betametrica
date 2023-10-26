@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+author: "Zapata Gamarra Steven - 183103"
+date: "2023-10-26"
+output: github_document
+---
+```{r, message=FALSE}
+#control + alt + i para nuevo espacio de trabajo
+library(dplyr)
+library(openxlsx)
+library(readr)
+
+
+```
+
+#---- Cargar Bases de Datos #----
+```{r}
+datos <- read.xlsx("Datos.xlsx", na.strings = T)
+head(datos)
+str(datos)
+names(datos)
+```
+```{r, echo=FALSE}
+forecast::autoplot(forecast::forecast(AirPassengers))
+```
+
+
+
